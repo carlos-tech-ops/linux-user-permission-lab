@@ -1,0 +1,3 @@
+drwxrwxrwt. 1 root root  0 Jun  3 23:36 /opt/public
+drwxr-sr-x. 1 root root 14 Jun  4 00:41 /opt/tools
+-rwsr-xr-x. 1 root root 145312 Jun  4 00:41 /opt/tools/ls-test
