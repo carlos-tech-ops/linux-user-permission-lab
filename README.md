@@ -89,3 +89,49 @@ ls -l /opt/projects/testfile_by_bob
 ```
 
 ---
+
+---
+
+## 🧪 SECTION 5: Troubleshooting Real-World Permission Errors
+
+### 🎯 Objective
+
+Simulate and troubleshoot permission errors in a collaborative directory (`/opt/team-project`) where a user (`carlos`) cannot access or edit files owned by `root`. This replicates real-world DevOps and system administration scenarios.
+
+---
+
+### 🛠️ Actions Performed
+
+1. Created directory `/opt/team-project`
+2. Created file `report.txt` as `root`
+3. Tried accessing/modifying the file as user `carlos`
+4. Received a `Permission denied` error — proving access misconfiguration
+5. Collected broken permission output → `outputs/permissions-broken.txt`
+6. Applied correct group ownership and permissions:
+   - Group: `carlos`
+   - File permissions: `chmod 640 report.txt`
+   - Directory permissions: `chmod 770 /opt/team-project`
+7. Verified successful access
+8. Collected corrected permission output → `outputs/permissions-fixed.txt`
+
+---
+
+### 📄 Output Logs
+
+- `outputs/permissions-broken.txt` – Before fixing permissions (contains the `Permission denied` error)  
+- `outputs/permissions-fixed.txt` – After fixing permissions
+
+---
+
+### 📸 Screenshots
+
+- **Access Denied Output**
+  ![Permission Denied Error](images/permission-denied.png)
+
+- **Permission Error (Broken)**
+  ![Broken Permissions](images/permissions-broken.png)
+
+- **Permissions Corrected (Fixed)**
+  ![Fixed Permissions](images/permissions-fixed.png)
+
+---
