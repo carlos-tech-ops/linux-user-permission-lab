@@ -38,3 +38,19 @@ sudo useradd alice
 sudo useradd bob
 sudo groupadd devs
 sudo usermod -aG devs alice
+
+---
+
+### 📸 Screenshots
+
+🗂️ **Project Output Folder**
+Shows the log files captured during this lab (before/after permissions, special bits).
+![Outputs Folder Contents](images/outputs-folder.png)
+
+📸 **Permissions Before vs After**
+Demonstrates the change from incorrect to correct permissions on `/opt/shared` and `/opt/public`.
+![Permissions Comparison](images/permissions-before-after.png)
+
+📸 **Special Permissions Applied**
+Confirms `SetUID`, `SetGID`, and sticky bit were correctly applied and verified.
+![Special Bits](images/special-permissions-check.png)
