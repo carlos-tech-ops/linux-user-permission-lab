@@ -1,0 +1,8 @@
+# file: opt/projects
+# owner: alice
+# group: devs
+user::rwx
+group::rwx
+mask::rwx
+other::---
+
