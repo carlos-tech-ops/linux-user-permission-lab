@@ -1,0 +1,2 @@
+total 0
+-rw-r-----. 1 root carlos 0 Jun  4 02:34 report.txt
