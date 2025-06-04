@@ -58,7 +58,7 @@ Confirms `SetUID`, `SetGID`, and sticky bit were correctly applied and verified.
 
 ---
 
-## 🔐 Section 4: ACLs – Access Control Lists
+## 🔐 ACLs – Access Control Lists
 
 In enterprise environments, Access Control Lists (ACLs) provide **fine-grained permissions** beyond standard Unix user/group ownership, allowing specific users to access files or directories without altering ownership.
 
@@ -92,7 +92,7 @@ ls -l /opt/projects/testfile_by_bob
 
 ---
 
-## 🧪 SECTION 5: Troubleshooting Real-World Permission Errors
+## 🧪 Troubleshooting Real-World Permission Errors
 
 ### 🎯 Objective
 
