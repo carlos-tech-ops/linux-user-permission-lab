@@ -55,3 +55,37 @@ Demonstrates the change from incorrect to correct permissions on `/opt/shared` a
 📸 **Special Permissions Applied**
 Confirms `SetUID`, `SetGID`, and sticky bit were correctly applied and verified.
 ![Special Bits](images/special-permissions-check.png)
+
+---
+
+## 🔐 Section 4: ACLs – Access Control Lists
+
+In enterprise environments, Access Control Lists (ACLs) provide **fine-grained permissions** beyond standard Unix user/group ownership, allowing specific users to access files or directories without altering ownership.
+
+### 🎯 Objective
+
+Grant user `bob` full access (`rwx`) to the `/opt/projects` directory **without changing ownership or group**, using `setfacl`.
+
+---
+
+### 🛠️ Commands Executed
+
+```bash
+# Create the projects directory
+sudo mkdir -p /opt/projects
+
+# Verify default ownership and permissions
+ls -ld /opt/projects
+
+# Grant rwx permissions to bob using ACL
+sudo setfacl -m u:bob:rwx /opt/projects
+
+# Confirm ACL and export to file
+getfacl /opt/projects > outputs/getfacl-output.txt
+
+# [Optional] Test Bob's access
+sudo -u bob touch /opt/projects/testfile_by_bob
+ls -l /opt/projects/testfile_by_bob
+```
+
+---
