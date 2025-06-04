@@ -38,6 +38,7 @@ sudo useradd alice
 sudo useradd bob
 sudo groupadd devs
 sudo usermod -aG devs alice
+```
 
 ---
 
